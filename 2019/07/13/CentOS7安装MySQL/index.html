@@ -108,25 +108,25 @@
 
 
 
-  <meta name="description" content="谦虚低调勿忘初心">
-<meta name="keywords" content="随笔">
+  <meta name="description" content="1 添加MariaDB软件源在/etc/yum.repos.d/目录中添加MariaDB.repo文件 12cd /etc/yum.repos.dsudo vi MariaDB.repo 在文件中编写 123456789# MariaDB 10.3 CentOS repository list - created 2018-11-24 14:39 UTC# http://downloads.mar">
+<meta name="keywords" content="CentOS,MySQL,MariaDB">
 <meta property="og:type" content="article">
-<meta property="og:title" content="无题">
-<meta property="og:url" content="http://blog.idehai.com/2018/08/21/无题/index.html">
+<meta property="og:title" content="CentOS7安装MySQL（MariaDB)">
+<meta property="og:url" content="http://blog.idehai.com/2019/07/13/CentOS7安装MySQL/index.html">
 <meta property="og:site_name" content="阿德Delron">
-<meta property="og:description" content="谦虚低调勿忘初心">
+<meta property="og:description" content="1 添加MariaDB软件源在/etc/yum.repos.d/目录中添加MariaDB.repo文件 12cd /etc/yum.repos.dsudo vi MariaDB.repo 在文件中编写 123456789# MariaDB 10.3 CentOS repository list - created 2018-11-24 14:39 UTC# http://downloads.mar">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-08-20T17:03:23.806Z">
+<meta property="og:updated_time" content="2019-07-13T15:50:12.449Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="无题">
-<meta name="twitter:description" content="谦虚低调勿忘初心">
+<meta name="twitter:title" content="CentOS7安装MySQL（MariaDB)">
+<meta name="twitter:description" content="1 添加MariaDB软件源在/etc/yum.repos.d/目录中添加MariaDB.repo文件 12cd /etc/yum.repos.dsudo vi MariaDB.repo 在文件中编写 123456789# MariaDB 10.3 CentOS repository list - created 2018-11-24 14:39 UTC# http://downloads.mar">
 
 
 
 
 
 
-  <link rel="canonical" href="http://blog.idehai.com/2018/08/21/无题/">
+  <link rel="canonical" href="http://blog.idehai.com/2019/07/13/CentOS7安装MySQL/">
 
 
 
@@ -136,7 +136,7 @@
   };
 </script>
 
-  <title>无题 | 阿德Delron</title>
+  <title>CentOS7安装MySQL（MariaDB) | 阿德Delron</title>
   
 
 
@@ -305,7 +305,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://blog.idehai.com/2018/08/21/无题/">
+    <link itemprop="mainEntityOfPage" href="http://blog.idehai.com/2019/07/13/CentOS7安装MySQL/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Delron Kung">
@@ -322,7 +322,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">无题
+          <h1 class="post-title" itemprop="name headline">CentOS7安装MySQL（MariaDB)
               
             
           </h1>
@@ -347,7 +347,7 @@
                 
               
 
-              <time title="创建时间：2018-08-21 01:02:31 / 修改时间：01:03:23" itemprop="dateCreated datePublished" datetime="2018-08-21T01:02:31+08:00">2018-08-21</time>
+              <time title="创建时间：2019-07-13 23:00:31 / 修改时间：23:50:12" itemprop="dateCreated datePublished" datetime="2019-07-13T23:00:31+08:00">2019-07-13</time>
             
 
             
@@ -366,8 +366,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/08/21/无题/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2018/08/21/无题/" itemprop="commentCount"></span>
+                <a href="/2019/07/13/CentOS7安装MySQL/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2019/07/13/CentOS7安装MySQL/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -375,7 +375,7 @@
 
           
           
-             <span id="/2018/08/21/无题/" class="leancloud_visitors" data-flag-title="无题">
+             <span id="/2019/07/13/CentOS7安装MySQL/" class="leancloud_visitors" data-flag-title="CentOS7安装MySQL（MariaDB)">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -406,7 +406,24 @@
       
 
       
-        <p>谦虚低调<br>勿忘初心</p>
+        <h2 id="1-添加MariaDB软件源"><a href="#1-添加MariaDB软件源" class="headerlink" title="1 添加MariaDB软件源"></a>1 添加MariaDB软件源</h2><p>在<code>/etc/yum.repos.d/</code>目录中添加MariaDB.repo文件</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd /etc/yum.repos.d</span><br><span class="line">sudo vi MariaDB.repo</span><br></pre></td></tr></table></figure>
+<p>在文件中编写</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"># MariaDB 10.3 CentOS repository list - created 2018-11-24 14:39 UTC</span><br><span class="line"># http://downloads.mariadb.org/mariadb/repositories/</span><br><span class="line">[mariadb]</span><br><span class="line">name = MariaDB</span><br><span class="line">#baseurl = http://yum.mariadb.org/10.3/centos7-amd64</span><br><span class="line">baseurl = http://mirrors.ustc.edu.cn/mariadb/yum/10.3/centos7-amd64</span><br><span class="line">#gpgkey=https://yum.mariadb.org/RPM-GPG-KEY-MariaDB</span><br><span class="line">gpgkey=http://mirrors.ustc.edu.cn/mariadb/yum/RPM-GPG-KEY-MariaDB</span><br><span class="line">gpgcheck=1</span><br></pre></td></tr></table></figure>
+<h2 id="2-安装MariaDB"><a href="#2-安装MariaDB" class="headerlink" title="2 安装MariaDB"></a>2 安装MariaDB</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sudo yum install MariaDB-server MariaDB-client</span><br><span class="line"></span><br><span class="line">sudo yum install mariadb-devel</span><br><span class="line"></span><br><span class="line">sudo yum install MariaDB-shared</span><br></pre></td></tr></table></figure>
+<h2 id="3-修改配置文件"><a href="#3-修改配置文件" class="headerlink" title="3 修改配置文件"></a>3 修改配置文件</h2><h4 id="修改-etc-my-cnf-d-server-cnf"><a href="#修改-etc-my-cnf-d-server-cnf" class="headerlink" title="修改 /etc/my.cnf.d/server.cnf"></a>修改 <code>/etc/my.cnf.d/server.cnf</code></h4><p>在 <strong>[mysqld]</strong> 标签下方添加</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">init_connect=&apos;SET collation_connection = utf8_unicode_ci&apos; </span><br><span class="line">init_connect=&apos;SET NAMES utf8&apos; </span><br><span class="line">character-set-server=utf8 </span><br><span class="line">collation-server=utf8_unicode_ci </span><br><span class="line">skip-character-set-client-handshake</span><br></pre></td></tr></table></figure>
+<h4 id="修改-etc-my-cnf-d-client-cnf"><a href="#修改-etc-my-cnf-d-client-cnf" class="headerlink" title="修改/etc/my.cnf.d/client.cnf"></a>修改<code>/etc/my.cnf.d/client.cnf</code></h4><p>在 <strong>[client]</strong> 标签下方添加</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">default-character-set=utf8</span><br></pre></td></tr></table></figure>
+<h4 id="修改-etc-my-cnf-d-mysql-clients-cnf"><a href="#修改-etc-my-cnf-d-mysql-clients-cnf" class="headerlink" title="修改/etc/my.cnf.d/mysql-clients.cnf"></a>修改<code>/etc/my.cnf.d/mysql-clients.cnf</code></h4><p>在 <strong>[mysql]</strong> 标签下方添加</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">default-character-set=utf8</span><br></pre></td></tr></table></figure>
+<h2 id="4-启动"><a href="#4-启动" class="headerlink" title="4 启动"></a>4 启动</h2><p>设置开机自启</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl enable mariadb</span><br></pre></td></tr></table></figure>
+<p>启动mariadb</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl start mariadb</span><br></pre></td></tr></table></figure>
+<h2 id="5-设置root账号"><a href="#5-设置root账号" class="headerlink" title="5 设置root账号"></a>5 设置root账号</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql_secure_installation</span><br></pre></td></tr></table></figure>
+<h2 id="6-Python客户端依赖"><a href="#6-Python客户端依赖" class="headerlink" title="6 Python客户端依赖"></a>6 Python客户端依赖</h2><p>如果需要使用mysql的python客户端库mysqlclient，需要安装一下依赖包：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo yum install python-devel</span><br><span class="line">sudo yum install zlib-devel</span><br><span class="line">sudo yum install openssl-devel</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -427,7 +444,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/随笔/" rel="tag"># 随笔</a>
+            <a href="/tags/CentOS-MySQL-MariaDB/" rel="tag"># CentOS,MySQL,MariaDB</a>
           
         </div>
       
@@ -440,8 +457,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/01/03/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
+              <a href="/2018/08/21/无题/" rel="next" title="无题">
+                <i class="fa fa-chevron-left"></i> 无题
               </a>
             
           </div>
@@ -450,8 +467,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/07/13/CentOS7安装MySQL/" rel="prev" title="CentOS7安装MySQL（MariaDB)">
-                CentOS7安装MySQL（MariaDB) <i class="fa fa-chevron-right"></i>
+              <a href="/2019/07/13/CentOS7源码安装Redis单机实例/" rel="prev" title="CentOS7源码安装Redis单机实例">
+                CentOS7源码安装Redis单机实例 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -500,8 +517,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -582,6 +608,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-添加MariaDB软件源"><span class="nav-number">1.</span> <span class="nav-text">1 添加MariaDB软件源</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-安装MariaDB"><span class="nav-number">2.</span> <span class="nav-text">2 安装MariaDB</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-修改配置文件"><span class="nav-number">3.</span> <span class="nav-text">3 修改配置文件</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#修改-etc-my-cnf-d-server-cnf"><span class="nav-number">3.0.1.</span> <span class="nav-text">修改 /etc/my.cnf.d/server.cnf</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#修改-etc-my-cnf-d-client-cnf"><span class="nav-number">3.0.2.</span> <span class="nav-text">修改/etc/my.cnf.d/client.cnf</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#修改-etc-my-cnf-d-mysql-clients-cnf"><span class="nav-number">3.0.3.</span> <span class="nav-text">修改/etc/my.cnf.d/mysql-clients.cnf</span></a></li></ol></li></ol><li class="nav-item nav-level-2"><a class="nav-link" href="#4-启动"><span class="nav-number">4.</span> <span class="nav-text">4 启动</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-设置root账号"><span class="nav-number">5.</span> <span class="nav-text">5 设置root账号</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-Python客户端依赖"><span class="nav-number">6.</span> <span class="nav-text">6 Python客户端依赖</span></a></li></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

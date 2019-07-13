@@ -108,25 +108,25 @@
 
 
 
-  <meta name="description" content="谦虚低调勿忘初心">
-<meta name="keywords" content="随笔">
+  <meta name="description" content="1 安装gcc1sudo yum install gcc 2 下载Redis1wget http://download.redis.io/releases/redis-4.0.13.tar.gz 3 安装Redis1234tar -zxvf redis-4.0.13.tar.gzcd redis-4.0.13sudo makesudo make install make install后在 /us">
+<meta name="keywords" content="CentOS,Redis">
 <meta property="og:type" content="article">
-<meta property="og:title" content="无题">
-<meta property="og:url" content="http://blog.idehai.com/2018/08/21/无题/index.html">
+<meta property="og:title" content="CentOS7源码安装Redis单机实例">
+<meta property="og:url" content="http://blog.idehai.com/2019/07/13/CentOS7源码安装Redis单机实例/index.html">
 <meta property="og:site_name" content="阿德Delron">
-<meta property="og:description" content="谦虚低调勿忘初心">
+<meta property="og:description" content="1 安装gcc1sudo yum install gcc 2 下载Redis1wget http://download.redis.io/releases/redis-4.0.13.tar.gz 3 安装Redis1234tar -zxvf redis-4.0.13.tar.gzcd redis-4.0.13sudo makesudo make install make install后在 /us">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-08-20T17:03:23.806Z">
+<meta property="og:updated_time" content="2019-07-13T15:42:52.011Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="无题">
-<meta name="twitter:description" content="谦虚低调勿忘初心">
+<meta name="twitter:title" content="CentOS7源码安装Redis单机实例">
+<meta name="twitter:description" content="1 安装gcc1sudo yum install gcc 2 下载Redis1wget http://download.redis.io/releases/redis-4.0.13.tar.gz 3 安装Redis1234tar -zxvf redis-4.0.13.tar.gzcd redis-4.0.13sudo makesudo make install make install后在 /us">
 
 
 
 
 
 
-  <link rel="canonical" href="http://blog.idehai.com/2018/08/21/无题/">
+  <link rel="canonical" href="http://blog.idehai.com/2019/07/13/CentOS7源码安装Redis单机实例/">
 
 
 
@@ -136,7 +136,7 @@
   };
 </script>
 
-  <title>无题 | 阿德Delron</title>
+  <title>CentOS7源码安装Redis单机实例 | 阿德Delron</title>
   
 
 
@@ -305,7 +305,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://blog.idehai.com/2018/08/21/无题/">
+    <link itemprop="mainEntityOfPage" href="http://blog.idehai.com/2019/07/13/CentOS7源码安装Redis单机实例/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Delron Kung">
@@ -322,7 +322,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">无题
+          <h1 class="post-title" itemprop="name headline">CentOS7源码安装Redis单机实例
               
             
           </h1>
@@ -347,7 +347,7 @@
                 
               
 
-              <time title="创建时间：2018-08-21 01:02:31 / 修改时间：01:03:23" itemprop="dateCreated datePublished" datetime="2018-08-21T01:02:31+08:00">2018-08-21</time>
+              <time title="创建时间：2019-07-13 23:35:31 / 修改时间：23:42:52" itemprop="dateCreated datePublished" datetime="2019-07-13T23:35:31+08:00">2019-07-13</time>
             
 
             
@@ -366,8 +366,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/08/21/无题/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2018/08/21/无题/" itemprop="commentCount"></span>
+                <a href="/2019/07/13/CentOS7源码安装Redis单机实例/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2019/07/13/CentOS7源码安装Redis单机实例/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -375,7 +375,7 @@
 
           
           
-             <span id="/2018/08/21/无题/" class="leancloud_visitors" data-flag-title="无题">
+             <span id="/2019/07/13/CentOS7源码安装Redis单机实例/" class="leancloud_visitors" data-flag-title="CentOS7源码安装Redis单机实例">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -406,7 +406,18 @@
       
 
       
-        <p>谦虚低调<br>勿忘初心</p>
+        <h2 id="1-安装gcc"><a href="#1-安装gcc" class="headerlink" title="1 安装gcc"></a>1 安装gcc</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo yum install gcc</span><br></pre></td></tr></table></figure>
+<h2 id="2-下载Redis"><a href="#2-下载Redis" class="headerlink" title="2 下载Redis"></a>2 下载Redis</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget http://download.redis.io/releases/redis-4.0.13.tar.gz</span><br></pre></td></tr></table></figure>
+<h2 id="3-安装Redis"><a href="#3-安装Redis" class="headerlink" title="3 安装Redis"></a>3 安装Redis</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">tar -zxvf redis-4.0.13.tar.gz</span><br><span class="line">cd redis-4.0.13</span><br><span class="line">sudo make</span><br><span class="line">sudo make install</span><br></pre></td></tr></table></figure>
+<p>make install后在 <code>/usr/local/bin</code>里有redis命令</p>
+<h2 id="4-缺少jemalloc的解决"><a href="#4-缺少jemalloc的解决" class="headerlink" title="4 缺少jemalloc的解决"></a>4 缺少jemalloc的解决</h2><p>如果安装中出现如下错误</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">make[1]: Entering directory `/root/Downloads/redis-3.2.0/src'</span><br><span class="line">    CC adlist.o</span><br><span class="line">In file included from adlist.c:34:</span><br><span class="line">zmalloc.h:50:31: error: jemalloc/jemalloc.h: No such file or directory</span><br><span class="line">zmalloc.h:55:2: error: #error "Newer version of jemalloc required"</span><br><span class="line">make[1]: *** [adlist.o] Error 1</span><br><span class="line">make[1]: Leaving directory `/root/Downloads/redis-3.2.0/src'</span><br><span class="line">make: *** [all] Error 2</span><br></pre></td></tr></table></figure>
+<p>可以先安装jemalloc</p>
+<h4 id="下载jemalloc"><a href="#下载jemalloc" class="headerlink" title="下载jemalloc"></a>下载jemalloc</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget http://download-ib01.fedoraproject.org/pub/epel/7/x86_64/Packages/j/jemalloc-3.6.0-1.el7.x86_64.rpm</span><br></pre></td></tr></table></figure>
+<h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo rpm -Uvh jemalloc-3.6.0-1.el7.x86_64.rpm</span><br><span class="line">sudo yum install jemalloc</span><br></pre></td></tr></table></figure>
+<p>安装后再执行</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo make distclean</span><br></pre></td></tr></table></figure>
+<p>而后从新make安装redis即可。</p>
 
       
     </div>
@@ -427,7 +438,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/随笔/" rel="tag"># 随笔</a>
+            <a href="/tags/CentOS-Redis/" rel="tag"># CentOS,Redis</a>
           
         </div>
       
@@ -440,8 +451,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/01/03/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
+              <a href="/2019/07/13/CentOS7安装MySQL/" rel="next" title="CentOS7安装MySQL（MariaDB)">
+                <i class="fa fa-chevron-left"></i> CentOS7安装MySQL（MariaDB)
               </a>
             
           </div>
@@ -450,8 +461,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/07/13/CentOS7安装MySQL/" rel="prev" title="CentOS7安装MySQL（MariaDB)">
-                CentOS7安装MySQL（MariaDB) <i class="fa fa-chevron-right"></i>
+              <a href="/2019/07/14/CentOS7安装RabbitMQ/" rel="prev" title="CentOS7安装RabbitMQ">
+                CentOS7安装RabbitMQ <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -500,8 +511,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -582,6 +602,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-安装gcc"><span class="nav-number">1.</span> <span class="nav-text">1 安装gcc</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-下载Redis"><span class="nav-number">2.</span> <span class="nav-text">2 下载Redis</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-安装Redis"><span class="nav-number">3.</span> <span class="nav-text">3 安装Redis</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-缺少jemalloc的解决"><span class="nav-number">4.</span> <span class="nav-text">4 缺少jemalloc的解决</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#下载jemalloc"><span class="nav-number">4.0.1.</span> <span class="nav-text">下载jemalloc</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#安装"><span class="nav-number">4.0.2.</span> <span class="nav-text">安装</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

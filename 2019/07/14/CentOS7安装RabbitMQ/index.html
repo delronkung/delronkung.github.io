@@ -108,25 +108,25 @@
 
 
 
-  <meta name="description" content="谦虚低调勿忘初心">
-<meta name="keywords" content="随笔">
+  <meta name="description" content="1 安装erlang在/etc/yum.repos.d/目录中添加rabbitmq_erlang.repo文件 12cd /etc/yum.repos.dsudo vi rabbitmq_erlang.repo 在文件中添加 12345678# In /etc/yum.repos.d/rabbitmq_erlang.repo[rabbitmq-erlang]name=rabbitmq-erlang">
+<meta name="keywords" content="CentOS,RabbitMQ">
 <meta property="og:type" content="article">
-<meta property="og:title" content="无题">
-<meta property="og:url" content="http://blog.idehai.com/2018/08/21/无题/index.html">
+<meta property="og:title" content="CentOS7安装RabbitMQ">
+<meta property="og:url" content="http://blog.idehai.com/2019/07/14/CentOS7安装RabbitMQ/index.html">
 <meta property="og:site_name" content="阿德Delron">
-<meta property="og:description" content="谦虚低调勿忘初心">
+<meta property="og:description" content="1 安装erlang在/etc/yum.repos.d/目录中添加rabbitmq_erlang.repo文件 12cd /etc/yum.repos.dsudo vi rabbitmq_erlang.repo 在文件中添加 12345678# In /etc/yum.repos.d/rabbitmq_erlang.repo[rabbitmq-erlang]name=rabbitmq-erlang">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-08-20T17:03:23.806Z">
+<meta property="og:updated_time" content="2019-07-13T16:07:05.541Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="无题">
-<meta name="twitter:description" content="谦虚低调勿忘初心">
+<meta name="twitter:title" content="CentOS7安装RabbitMQ">
+<meta name="twitter:description" content="1 安装erlang在/etc/yum.repos.d/目录中添加rabbitmq_erlang.repo文件 12cd /etc/yum.repos.dsudo vi rabbitmq_erlang.repo 在文件中添加 12345678# In /etc/yum.repos.d/rabbitmq_erlang.repo[rabbitmq-erlang]name=rabbitmq-erlang">
 
 
 
 
 
 
-  <link rel="canonical" href="http://blog.idehai.com/2018/08/21/无题/">
+  <link rel="canonical" href="http://blog.idehai.com/2019/07/14/CentOS7安装RabbitMQ/">
 
 
 
@@ -136,7 +136,7 @@
   };
 </script>
 
-  <title>无题 | 阿德Delron</title>
+  <title>CentOS7安装RabbitMQ | 阿德Delron</title>
   
 
 
@@ -305,7 +305,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://blog.idehai.com/2018/08/21/无题/">
+    <link itemprop="mainEntityOfPage" href="http://blog.idehai.com/2019/07/14/CentOS7安装RabbitMQ/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Delron Kung">
@@ -322,7 +322,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">无题
+          <h1 class="post-title" itemprop="name headline">CentOS7安装RabbitMQ
               
             
           </h1>
@@ -347,7 +347,7 @@
                 
               
 
-              <time title="创建时间：2018-08-21 01:02:31 / 修改时间：01:03:23" itemprop="dateCreated datePublished" datetime="2018-08-21T01:02:31+08:00">2018-08-21</time>
+              <time title="创建时间：2019-07-14 00:00:31 / 修改时间：00:07:05" itemprop="dateCreated datePublished" datetime="2019-07-14T00:00:31+08:00">2019-07-14</time>
             
 
             
@@ -366,8 +366,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/08/21/无题/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2018/08/21/无题/" itemprop="commentCount"></span>
+                <a href="/2019/07/14/CentOS7安装RabbitMQ/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2019/07/14/CentOS7安装RabbitMQ/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -375,7 +375,7 @@
 
           
           
-             <span id="/2018/08/21/无题/" class="leancloud_visitors" data-flag-title="无题">
+             <span id="/2019/07/14/CentOS7安装RabbitMQ/" class="leancloud_visitors" data-flag-title="CentOS7安装RabbitMQ">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -406,7 +406,21 @@
       
 
       
-        <p>谦虚低调<br>勿忘初心</p>
+        <h2 id="1-安装erlang"><a href="#1-安装erlang" class="headerlink" title="1 安装erlang"></a>1 安装erlang</h2><p>在<code>/etc/yum.repos.d/</code>目录中添加rabbitmq_erlang.repo文件</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd /etc/yum.repos.d</span><br><span class="line">sudo vi rabbitmq_erlang.repo</span><br></pre></td></tr></table></figure>
+<p>在文件中添加</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># In /etc/yum.repos.d/rabbitmq_erlang.repo</span><br><span class="line">[rabbitmq-erlang]</span><br><span class="line">name=rabbitmq-erlang</span><br><span class="line">baseurl=https://dl.bintray.com/rabbitmq-erlang/rpm/erlang/21/el/7</span><br><span class="line">gpgcheck=1</span><br><span class="line">gpgkey=https://dl.bintray.com/rabbitmq/Keys/rabbitmq-release-signing-key.asc</span><br><span class="line">repo_gpgcheck=0</span><br><span class="line">enabled=1</span><br></pre></td></tr></table></figure>
+<p>执行安装</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo yum install erlang</span><br></pre></td></tr></table></figure>
+<h2 id="2-安装RabbitMQ"><a href="#2-安装RabbitMQ" class="headerlink" title="2 安装RabbitMQ"></a>2 安装RabbitMQ</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rpm --import https://github.com/rabbitmq/signing-keys/releases/download/2.0/rabbitmq-release-signing-key.asc</span><br></pre></td></tr></table></figure>
+<p>在<code>/etc/yum.repos.d/</code>目录中添加rabbitmq_server.repo文件</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd /etc/yum.repos.d</span><br><span class="line">sudo vi rabbitmq_server.repo</span><br></pre></td></tr></table></figure>
+<p>在文件中添加</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"># In /etc/yum.repos.d/rabbitmq_server.repo</span><br><span class="line">[bintray-rabbitmq-server]</span><br><span class="line">name=bintray-rabbitmq-rpm</span><br><span class="line">baseurl=https://dl.bintray.com/rabbitmq/rpm/rabbitmq-server/v3.7.x/el/7/</span><br><span class="line">gpgcheck=0</span><br><span class="line">repo_gpgcheck=0</span><br><span class="line">enabled=1</span><br></pre></td></tr></table></figure>
+<p>执行安装</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo yum install rabbitmq-server</span><br></pre></td></tr></table></figure>
+<h2 id="3-启动"><a href="#3-启动" class="headerlink" title="3 启动"></a>3 启动</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo chkconfig rabbitmq-server on</span><br><span class="line">sudo systemctl start  rabbitmq-server.service</span><br></pre></td></tr></table></figure>
+<h2 id="4-设置账号"><a href="#4-设置账号" class="headerlink" title="4 设置账号"></a>4 设置账号</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ sudo rabbitmqctl add_user myuser mypassword</span><br><span class="line"></span><br><span class="line">$ sudo rabbitmqctl add_vhost myvhost</span><br><span class="line"></span><br><span class="line">$ sudo rabbitmqctl set_user_tags myuser mytag</span><br><span class="line"></span><br><span class="line">$ sudo rabbitmqctl set_permissions -p myvhost myuser &quot;.*&quot; &quot;.*&quot; &quot;.*&quot;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -427,7 +441,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/随笔/" rel="tag"># 随笔</a>
+            <a href="/tags/CentOS-RabbitMQ/" rel="tag"># CentOS,RabbitMQ</a>
           
         </div>
       
@@ -440,8 +454,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/01/03/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
+              <a href="/2019/07/13/CentOS7源码安装Redis单机实例/" rel="next" title="CentOS7源码安装Redis单机实例">
+                <i class="fa fa-chevron-left"></i> CentOS7源码安装Redis单机实例
               </a>
             
           </div>
@@ -450,8 +464,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/07/13/CentOS7安装MySQL/" rel="prev" title="CentOS7安装MySQL（MariaDB)">
-                CentOS7安装MySQL（MariaDB) <i class="fa fa-chevron-right"></i>
+              <a href="/2019/07/14/Redis Cluster配置/" rel="prev" title="Redis Cluster配置">
+                Redis Cluster配置 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -500,8 +514,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -582,6 +605,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-安装erlang"><span class="nav-number">1.</span> <span class="nav-text">1 安装erlang</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-安装RabbitMQ"><span class="nav-number">2.</span> <span class="nav-text">2 安装RabbitMQ</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-启动"><span class="nav-number">3.</span> <span class="nav-text">3 启动</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-设置账号"><span class="nav-number">4.</span> <span class="nav-text">4 设置账号</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

@@ -108,25 +108,25 @@
 
 
 
-  <meta name="description" content="谦虚低调勿忘初心">
-<meta name="keywords" content="随笔">
+  <meta name="description" content="1 安装RubyRedis cluster的运行需要使用Ruby 123456789101112wget https://cache.ruby-lang.org/pub/ruby/2.6/ruby-2.6.1.tar.gztar -zxvf ruby-2.6.1.tar.gzcd ruby-2.6.1./configuresudo makesudo make installgem install">
+<meta name="keywords" content="Redis">
 <meta property="og:type" content="article">
-<meta property="og:title" content="无题">
-<meta property="og:url" content="http://blog.idehai.com/2018/08/21/无题/index.html">
+<meta property="og:title" content="Redis Cluster配置">
+<meta property="og:url" content="http://blog.idehai.com/2019/07/14/Redis Cluster配置/index.html">
 <meta property="og:site_name" content="阿德Delron">
-<meta property="og:description" content="谦虚低调勿忘初心">
+<meta property="og:description" content="1 安装RubyRedis cluster的运行需要使用Ruby 123456789101112wget https://cache.ruby-lang.org/pub/ruby/2.6/ruby-2.6.1.tar.gztar -zxvf ruby-2.6.1.tar.gzcd ruby-2.6.1./configuresudo makesudo make installgem install">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-08-20T17:03:23.806Z">
+<meta property="og:updated_time" content="2019-07-13T16:25:48.455Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="无题">
-<meta name="twitter:description" content="谦虚低调勿忘初心">
+<meta name="twitter:title" content="Redis Cluster配置">
+<meta name="twitter:description" content="1 安装RubyRedis cluster的运行需要使用Ruby 123456789101112wget https://cache.ruby-lang.org/pub/ruby/2.6/ruby-2.6.1.tar.gztar -zxvf ruby-2.6.1.tar.gzcd ruby-2.6.1./configuresudo makesudo make installgem install">
 
 
 
 
 
 
-  <link rel="canonical" href="http://blog.idehai.com/2018/08/21/无题/">
+  <link rel="canonical" href="http://blog.idehai.com/2019/07/14/Redis Cluster配置/">
 
 
 
@@ -136,7 +136,7 @@
   };
 </script>
 
-  <title>无题 | 阿德Delron</title>
+  <title>Redis Cluster配置 | 阿德Delron</title>
   
 
 
@@ -305,7 +305,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://blog.idehai.com/2018/08/21/无题/">
+    <link itemprop="mainEntityOfPage" href="http://blog.idehai.com/2019/07/14/Redis Cluster配置/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Delron Kung">
@@ -322,7 +322,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">无题
+          <h1 class="post-title" itemprop="name headline">Redis Cluster配置
               
             
           </h1>
@@ -347,7 +347,7 @@
                 
               
 
-              <time title="创建时间：2018-08-21 01:02:31 / 修改时间：01:03:23" itemprop="dateCreated datePublished" datetime="2018-08-21T01:02:31+08:00">2018-08-21</time>
+              <time title="创建时间：2019-07-14 00:12:00 / 修改时间：00:25:48" itemprop="dateCreated datePublished" datetime="2019-07-14T00:12:00+08:00">2019-07-14</time>
             
 
             
@@ -366,8 +366,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/08/21/无题/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2018/08/21/无题/" itemprop="commentCount"></span>
+                <a href="/2019/07/14/Redis Cluster配置/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2019/07/14/Redis Cluster配置/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -375,7 +375,7 @@
 
           
           
-             <span id="/2018/08/21/无题/" class="leancloud_visitors" data-flag-title="无题">
+             <span id="/2019/07/14/Redis Cluster配置/" class="leancloud_visitors" data-flag-title="Redis Cluster配置">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -406,7 +406,36 @@
       
 
       
-        <p>谦虚低调<br>勿忘初心</p>
+        <h2 id="1-安装Ruby"><a href="#1-安装Ruby" class="headerlink" title="1 安装Ruby"></a>1 安装Ruby</h2><p>Redis cluster的运行需要使用Ruby</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">wget https://cache.ruby-lang.org/pub/ruby/2.6/ruby-2.6.1.tar.gz</span><br><span class="line"></span><br><span class="line">tar -zxvf ruby-2.6.1.tar.gz</span><br><span class="line"></span><br><span class="line">cd ruby-2.6.1</span><br><span class="line">./configure</span><br><span class="line"></span><br><span class="line">sudo make</span><br><span class="line"></span><br><span class="line">sudo make install</span><br><span class="line"></span><br><span class="line">gem install redis</span><br></pre></td></tr></table></figure>
+<h2 id="2-编写配置文件"><a href="#2-编写配置文件" class="headerlink" title="2 编写配置文件"></a>2 编写配置文件</h2><p><strong>以机器ip地址 172.17.0.133 为例。</strong></p>
+<p>在<code>/etc/redis/</code>中创建7000.conf，修改如下 </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">bind 172.17.0.133 </span><br><span class="line">port 7000 </span><br><span class="line">pidfile /var/run/redis_7000.pid </span><br><span class="line">logfile /var/log/redis_7000.log </span><br><span class="line">dir /var/lib/redis/7000 </span><br><span class="line">maxmemory 300000000 </span><br><span class="line">maxmemory-policy volatile-lru </span><br><span class="line">appendonly yes </span><br><span class="line">cluster-enabled yes </span><br><span class="line">cluster-config-file nodes-7000.conf </span><br><span class="line">cluster-node-timeout 10000</span><br></pre></td></tr></table></figure>
+<p>复制并创建另外5个配置文件，<strong>注意修改配置的细节信息</strong></p>
+<ul>
+<li>7001.conf</li>
+<li>7002.conf</li>
+<li>7003.conf</li>
+<li>7004.conf</li>
+<li>7005.conf</li>
+</ul>
+<h2 id="3-启动6个redis实例"><a href="#3-启动6个redis实例" class="headerlink" title="3 启动6个redis实例"></a>3 启动6个redis实例</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">redis-server /etc/redis/7000.conf</span><br><span class="line">redis-server /etc/redis/7001.conf</span><br><span class="line">redis-server /etc/redis/7002.conf</span><br><span class="line">redis-server /etc/redis/7003.conf</span><br><span class="line">redis-server /etc/redis/7004.conf</span><br><span class="line">redis-server /etc/redis/7005.conf</span><br></pre></td></tr></table></figure>
+<h2 id="4-启动cluster集群"><a href="#4-启动cluster集群" class="headerlink" title="4 启动cluster集群"></a>4 启动cluster集群</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo cp /root/redis-4.0.13/src/redis-trib.rb /usr/local/bin/</span><br><span class="line"></span><br><span class="line">redis-trib.rb create --replicas 1 172.17.0.133:7000 172.17.0.133:7001 172.17.0.133:7002 172.17.0.133:7003 172.17.0.133:7004 172.17.0.133:7005</span><br></pre></td></tr></table></figure>
+<h2 id="5-问题处理"><a href="#5-问题处理" class="headerlink" title="5 问题处理"></a>5 问题处理</h2><p>如果遇到 <code>waiting for the cluster to join</code>的问题，可从如下两点排错：</p>
+<ul>
+<li>配置文件中需要移除 bind 127.0.0.1 </li>
+<li>1xxxx端口防火墙是否放开 （cluster集群内需要使用1xxxx端口进行通讯）</li>
+</ul>
+<h2 id="6-Cluster辅助命令"><a href="#6-Cluster辅助命令" class="headerlink" title="6 Cluster辅助命令"></a>6 Cluster辅助命令</h2><ul>
+<li>redis-trib.rb help</li>
+<li>CLUSTER INFO 打印集群的信息  </li>
+<li><p>CLUSTER NODES 列出集群当前已知的所有节点（node），以及这些节点的相关信息。</p>
+</li>
+<li><p>CLUSTER FORGET <node_id> 从集群中移除 node_id 指定的节点</node_id></p>
+</li>
+<li><p>CLUSTER FLUSHSLOTS 移除指派给当前节点的所有槽，让当前节点变成一个没有指派任何槽的节点。</p>
+</li>
+</ul>
 
       
     </div>
@@ -427,7 +456,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/随笔/" rel="tag"># 随笔</a>
+            <a href="/tags/Redis/" rel="tag"># Redis</a>
           
         </div>
       
@@ -440,8 +469,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/01/03/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
+              <a href="/2019/07/14/CentOS7安装RabbitMQ/" rel="next" title="CentOS7安装RabbitMQ">
+                <i class="fa fa-chevron-left"></i> CentOS7安装RabbitMQ
               </a>
             
           </div>
@@ -450,8 +479,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/07/13/CentOS7安装MySQL/" rel="prev" title="CentOS7安装MySQL（MariaDB)">
-                CentOS7安装MySQL（MariaDB) <i class="fa fa-chevron-right"></i>
+              <a href="/2019/07/14/Redis主从与哨兵高可用配置/" rel="prev" title="Redis主从与哨兵高可用配置">
+                Redis主从与哨兵高可用配置 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -500,8 +529,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -582,6 +620,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-安装Ruby"><span class="nav-number">1.</span> <span class="nav-text">1 安装Ruby</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-编写配置文件"><span class="nav-number">2.</span> <span class="nav-text">2 编写配置文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-启动6个redis实例"><span class="nav-number">3.</span> <span class="nav-text">3 启动6个redis实例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-启动cluster集群"><span class="nav-number">4.</span> <span class="nav-text">4 启动cluster集群</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-问题处理"><span class="nav-number">5.</span> <span class="nav-text">5 问题处理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-Cluster辅助命令"><span class="nav-number">6.</span> <span class="nav-text">6 Cluster辅助命令</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

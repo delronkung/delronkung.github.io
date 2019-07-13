@@ -108,25 +108,25 @@
 
 
 
-  <meta name="description" content="谦虚低调勿忘初心">
-<meta name="keywords" content="随笔">
+  <meta name="description" content="1 安装wget1sudo yum install wget 2 安装JDK进入java官网下载jdk https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html 使用  jdk-8u191-linux-x64.tar.gz  1wget https://download.oracle.c">
+<meta name="keywords" content="CentOS, Elasticsearch">
 <meta property="og:type" content="article">
-<meta property="og:title" content="无题">
-<meta property="og:url" content="http://blog.idehai.com/2018/08/21/无题/index.html">
+<meta property="og:title" content="CentOS7安装Elasticsearch5">
+<meta property="og:url" content="http://blog.idehai.com/2019/07/14/CentOS7安装Elasticsearch5/index.html">
 <meta property="og:site_name" content="阿德Delron">
-<meta property="og:description" content="谦虚低调勿忘初心">
+<meta property="og:description" content="1 安装wget1sudo yum install wget 2 安装JDK进入java官网下载jdk https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html 使用  jdk-8u191-linux-x64.tar.gz  1wget https://download.oracle.c">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-08-20T17:03:23.806Z">
+<meta property="og:updated_time" content="2019-07-13T16:59:06.477Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="无题">
-<meta name="twitter:description" content="谦虚低调勿忘初心">
+<meta name="twitter:title" content="CentOS7安装Elasticsearch5">
+<meta name="twitter:description" content="1 安装wget1sudo yum install wget 2 安装JDK进入java官网下载jdk https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html 使用  jdk-8u191-linux-x64.tar.gz  1wget https://download.oracle.c">
 
 
 
 
 
 
-  <link rel="canonical" href="http://blog.idehai.com/2018/08/21/无题/">
+  <link rel="canonical" href="http://blog.idehai.com/2019/07/14/CentOS7安装Elasticsearch5/">
 
 
 
@@ -136,7 +136,7 @@
   };
 </script>
 
-  <title>无题 | 阿德Delron</title>
+  <title>CentOS7安装Elasticsearch5 | 阿德Delron</title>
   
 
 
@@ -305,7 +305,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://blog.idehai.com/2018/08/21/无题/">
+    <link itemprop="mainEntityOfPage" href="http://blog.idehai.com/2019/07/14/CentOS7安装Elasticsearch5/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Delron Kung">
@@ -322,7 +322,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">无题
+          <h1 class="post-title" itemprop="name headline">CentOS7安装Elasticsearch5
               
             
           </h1>
@@ -347,7 +347,7 @@
                 
               
 
-              <time title="创建时间：2018-08-21 01:02:31 / 修改时间：01:03:23" itemprop="dateCreated datePublished" datetime="2018-08-21T01:02:31+08:00">2018-08-21</time>
+              <time title="创建时间：2019-07-14 00:47:00 / 修改时间：00:59:06" itemprop="dateCreated datePublished" datetime="2019-07-14T00:47:00+08:00">2019-07-14</time>
             
 
             
@@ -366,8 +366,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/08/21/无题/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2018/08/21/无题/" itemprop="commentCount"></span>
+                <a href="/2019/07/14/CentOS7安装Elasticsearch5/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2019/07/14/CentOS7安装Elasticsearch5/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -375,7 +375,7 @@
 
           
           
-             <span id="/2018/08/21/无题/" class="leancloud_visitors" data-flag-title="无题">
+             <span id="/2019/07/14/CentOS7安装Elasticsearch5/" class="leancloud_visitors" data-flag-title="CentOS7安装Elasticsearch5">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -406,7 +406,26 @@
       
 
       
-        <p>谦虚低调<br>勿忘初心</p>
+        <h2 id="1-安装wget"><a href="#1-安装wget" class="headerlink" title="1 安装wget"></a>1 安装wget</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo yum install wget</span><br></pre></td></tr></table></figure>
+<h2 id="2-安装JDK"><a href="#2-安装JDK" class="headerlink" title="2 安装JDK"></a>2 安装JDK</h2><p>进入java官网下载jdk</p>
+<p><a href="https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html" target="_blank" rel="noopener">https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html</a></p>
+<p>使用  <a href="https://download.oracle.com/otn-pub/java/jdk/8u191-b12/2787e4a523244c269598db4e85c51e0c/jdk-8u191-linux-x64.tar.gz" target="_blank" rel="noopener">jdk-8u191-linux-x64.tar.gz</a> </p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget https://download.oracle.com/otn-pub/java/jdk/8u191-b12/2787e4a523244c269598db4e85c51e0c/jdk-8u191-linux-x64.tar.gz?AuthParam=1545469560_2e48f0e88b95e6414505d6bf5ff4cefb</span><br></pre></td></tr></table></figure>
+<p>或者 <a href="https://download.oracle.com/otn-pub/java/jdk/8u191-b12/2787e4a523244c269598db4e85c51e0c/jdk-8u191-linux-x64.rpm" target="_blank" rel="noopener">jdk-8u191-linux-x64.rpm</a> </p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rpm -ivh jdk-8u191-linux-x64.rpm</span><br></pre></td></tr></table></figure>
+<p>安装后查看java版本</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java -version</span><br></pre></td></tr></table></figure>
+<p>设置环境变量 </p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">vi .bash_profile </span><br><span class="line"></span><br><span class="line">在最后添加</span><br><span class="line">export JAVA_HOME=/usr/java/default</span><br></pre></td></tr></table></figure>
+<h2 id="3-安装ES"><a href="#3-安装ES" class="headerlink" title="3 安装ES"></a>3 安装ES</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rpm --import https://artifacts.elastic.co/GPG-KEY-elasticsearch</span><br></pre></td></tr></table></figure>
+<p>在/etc/yum.repos.d/ 中编辑elasticsearch5x.repo</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">[elasticsearch-5.x]</span><br><span class="line">name=Elasticsearch repository for 5.x packages</span><br><span class="line">baseurl=https://artifacts.elastic.co/packages/5.x/yum</span><br><span class="line">gpgcheck=1</span><br><span class="line">gpgkey=https://artifacts.elastic.co/GPG-KEY-elasticsearch</span><br><span class="line">enabled=1</span><br><span class="line">autorefresh=1</span><br><span class="line">type=rpm-md</span><br></pre></td></tr></table></figure>
+<p>执行安装</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo yum install elasticsearch</span><br></pre></td></tr></table></figure>
+<h2 id="4-启动"><a href="#4-启动" class="headerlink" title="4 启动"></a>4 启动</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl enable elasticsearch.service</span><br><span class="line"></span><br><span class="line">sudo systemctl start elasticsearch.service</span><br></pre></td></tr></table></figure>
+<h2 id="5-安装ik中文分析器"><a href="#5-安装ik中文分析器" class="headerlink" title="5 安装ik中文分析器"></a>5 安装ik中文分析器</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/share/elasticsearch</span><br><span class="line"></span><br><span class="line">./bin/elasticsearch-plugin install https://github.com/medcl/elasticsearch-analysis-ik/releases/download/v5.6.13/elasticsearch-analysis-ik-5.6.13.zip</span><br></pre></td></tr></table></figure>
+<p>重启es服务</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl restart elasticsearch</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -427,7 +446,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/随笔/" rel="tag"># 随笔</a>
+            <a href="/tags/CentOS-Elasticsearch/" rel="tag"># CentOS, Elasticsearch</a>
           
         </div>
       
@@ -440,8 +459,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/01/03/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
+              <a href="/2019/07/14/黑马头条环境安装笔记/" rel="next" title="黑马头条环境安装笔记">
+                <i class="fa fa-chevron-left"></i> 黑马头条环境安装笔记
               </a>
             
           </div>
@@ -449,10 +468,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/07/13/CentOS7安装MySQL/" rel="prev" title="CentOS7安装MySQL（MariaDB)">
-                CentOS7安装MySQL（MariaDB) <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -500,8 +515,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -582,6 +606,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-安装wget"><span class="nav-number">1.</span> <span class="nav-text">1 安装wget</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-安装JDK"><span class="nav-number">2.</span> <span class="nav-text">2 安装JDK</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-安装ES"><span class="nav-number">3.</span> <span class="nav-text">3 安装ES</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-启动"><span class="nav-number">4.</span> <span class="nav-text">4 启动</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-安装ik中文分析器"><span class="nav-number">5.</span> <span class="nav-text">5 安装ik中文分析器</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
