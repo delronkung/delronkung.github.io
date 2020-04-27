@@ -234,10 +234,10 @@
 </blockquote>
 <!--
 
-        <div id="aplayer-dMrydmPQ" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;"></div>
+        <div id="aplayer-OGTgeeUq" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;"></div>
 			  <script>
 				  var options = {"narrow":false,"autoplay":false,"showlrc":0,"music":[{"title":"让我为你唱首歌","author":"张翰/朱梓骁/魏晨/俞灏明","url":"https://media.meiduo.site/LetMeSingingForYou.mp4","pic":"https://p1.music.126.net/E2rj7yVN0szCF5Kxf1aS8A==/19066631137284075.jpg?param=130y130"},{"title":"小幸运","author":"田馥甄","url":"https://media.meiduo.site/LittleLuck.mpeg","pic":"https://p2.music.126.net/bwBsDMYJcFetIc-q_oWjAw==/109951163520335473.jpg?param=130y130"}]};
-				  options.element = document.getElementById("aplayer-dMrydmPQ");
+				  options.element = document.getElementById("aplayer-OGTgeeUq");
 				  var ap = new APlayer(options);
 			    window.aplayers || (window.aplayers = []);
 				  window.aplayers.push(ap);
@@ -422,14 +422,9 @@
                 console.error('Failed to save visitor count', error);
               });
           } else {
-              Counter('post', '/classes/Counter', { title, url, time: 1 })
-                .then(response => response.json())
-                .then(() => {
-                  leancloudSelector(url).innerText = 1;
-                })
-                .catch(error => {
-                  console.error('Failed to create', error);
-                });
+              leancloudSelector(url).innerText = 'Counter not initialized! More info at console err msg.';
+              console.error('ATTENTION! LeanCloud counter has security bug, see how to solve it here: https://github.com/theme-next/hexo-leancloud-counter-security. \n However, you can still use LeanCloud without security, by setting `security` option to `false`.');
+            
           }
         })
         .catch(error => {
@@ -456,7 +451,7 @@
         });
     }
 
-    let { app_id, app_key, server_url } = {"enable":true,"app_id":"5fTjCAV54bmH4wGWb0wouKlk-MdYXbMMI","app_key":"Fzgd5qQg6JiaDgz4P4d72nVt","server_url":"dylansblog.avosapps.us","security":false};
+    let { app_id, app_key, server_url } = {"enable":true,"app_id":"5fTjCAV54bmH4wGWb0wouKlk-MdYXbMMI","app_key":"Fzgd5qQg6JiaDgz4P4d72nVt","server_url":"dylansblog.avosapps.us","security":true};
     function fetchData(api_server) {
       var Counter = (method, url, data) => {
         return fetch(`${api_server}/1.1${url}`, {
