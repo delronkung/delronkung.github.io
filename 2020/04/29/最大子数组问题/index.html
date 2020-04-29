@@ -27,7 +27,7 @@
 <meta property="og:site_name" content="Dylan.K&#39;s Blog">
 <meta property="og:description" content="1 采用分治法思想将数组划分为左右两部分，查找左半部分与右半部分的最大子数组 与 当前问题类似，采用递归即可。 主要问题集中如何解决“最大子数组出现在跨域左右两部分”的时候，此时仅需从中间位置向两边查找最大和的边界位置即可。 时间复杂度: O(nlogn) 实现代码">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-04-29T17:29:15.394Z">
+<meta property="og:updated_time" content="2020-04-29T17:34:13.330Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="最大子数组问题">
 <meta name="twitter:description" content="1 采用分治法思想将数组划分为左右两部分，查找左半部分与右半部分的最大子数组 与 当前问题类似，采用递归即可。 主要问题集中如何解决“最大子数组出现在跨域左右两部分”的时候，此时仅需从中间位置向两边查找最大和的边界位置即可。 时间复杂度: O(nlogn) 实现代码">
@@ -197,7 +197,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-04-30 01:29:15" itemprop="dateModified" datetime="2020-04-30T01:29:15+08:00">2020-04-30</time>
+                <time title="修改时间：2020-04-30 01:34:13" itemprop="dateModified" datetime="2020-04-30T01:34:13+08:00">2020-04-30</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -236,7 +236,7 @@
 <blockquote>
 <p>使用如下思想为最大子数组问题设计一个非递归的、线性时间的算法。从数组的左边界开始，从左至右处理，记录到目前为止已经处理过的最大子数组。若已知A[1..j]的最大子数组，基于如下性质将解扩展为A[1..j+1]的最大子数组：A[1..j+1]的最大子数组要么是A[1..j]的最大子数组，要么是某个子数组A[i..j+1] (1≤i≤j+1)。在已知A[1..j]的最大子数组的情况下，可以在线性时间内找出形如A[i..j+1]的最大子数组。</p>
 </blockquote>
-<p>划重点: <strong>*</strong>A[1..j+1]的最大子数组要么是A[1..j]的最大子数组，要么是某个子数组A[i..j+1] (1≤i≤j+1)**</p>
+<p>划重点: <strong>A[1..j+1]的最大子数组要么是A[1..j]的最大子数组，要么是某个子数组A[i..j+1] (1≤i≤j+1) </strong></p>
 <p>在将数组由左向右处理时，A[1..j]的最大子数组是已求解，即已知的，需要求解的就是子数组A[i..j+1] (1≤i≤j+1)。此处对于数组A[i..j+1]要查找的最大解是包含边界A[j+1]的，否则就落入了对立条件A[1..j]数组中了。</p>
 <p>对于寻找包含边界A[j+1]在内的最大解的数组A[i..j+1]而言，最大解要么仅仅就是元素A[j+1]，要么就是A[j+1]及其前面元素一起。而对于A[j+1]及其前面元素一起的情况，其中隐含的条件是一定包含了以A[j] （A[j+1]的前一个元素）为边界的最大解，换言之，此种情况就是A[j+1]+(A[i..j]的最大解）。</p>
 <p>算法由左向右处理数组时，需要记录的值有：</p>
