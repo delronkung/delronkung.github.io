@@ -20,20 +20,20 @@
     var CONFIG = {"hostname":"blog.idehai.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"always","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":null,"activeClass":"gitalk"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="1 安装RubyRedis cluster的运行需要使用Ruby 123456789101112wget https://cache.ruby-lang.org/pub/ruby/2.6/ruby-2.6.1.tar.gztar -zxvf ruby-2.6.1.tar.gzcd ruby-2.6.1./configuresudo makesudo make installgem install">
-<meta name="keywords" content="Redis">
+  <meta name="description" content="堆是一个数组，可以将其视为一个近似的完全二叉树。换言之，即将一维的数组以二维的二叉树结构形式来对待处理。 思想在递增排序中，利用最大堆根节点为最大值的性质，每次取最大堆的根节点元素放到数组末尾，以此前推形成递增排序结果。  首先构造初始最大堆 交换最大堆的根节点元素与堆尾元素 缩小堆规模 重新调整最大堆  时间复杂度: O(nlogn) 构造初始最大堆时间复杂度为O(n)，每次重整最大堆的时间复杂">
+<meta name="keywords" content="堆,排序">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Redis Cluster配置">
-<meta property="og:url" content="https://blog.idehai.com/2019/07/14/Redis Cluster配置/index.html">
+<meta property="og:title" content="堆排序(Heap Sort)">
+<meta property="og:url" content="https://blog.idehai.com/2020/05/06/HeapSort/index.html">
 <meta property="og:site_name" content="Dylan.K&#39;s Blog">
-<meta property="og:description" content="1 安装RubyRedis cluster的运行需要使用Ruby 123456789101112wget https://cache.ruby-lang.org/pub/ruby/2.6/ruby-2.6.1.tar.gztar -zxvf ruby-2.6.1.tar.gzcd ruby-2.6.1./configuresudo makesudo make installgem install">
+<meta property="og:description" content="堆是一个数组，可以将其视为一个近似的完全二叉树。换言之，即将一维的数组以二维的二叉树结构形式来对待处理。 思想在递增排序中，利用最大堆根节点为最大值的性质，每次取最大堆的根节点元素放到数组末尾，以此前推形成递增排序结果。  首先构造初始最大堆 交换最大堆的根节点元素与堆尾元素 缩小堆规模 重新调整最大堆  时间复杂度: O(nlogn) 构造初始最大堆时间复杂度为O(n)，每次重整最大堆的时间复杂">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-04-27T19:05:16.498Z">
+<meta property="og:updated_time" content="2020-05-06T16:55:14.922Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Redis Cluster配置">
-<meta name="twitter:description" content="1 安装RubyRedis cluster的运行需要使用Ruby 123456789101112wget https://cache.ruby-lang.org/pub/ruby/2.6/ruby-2.6.1.tar.gztar -zxvf ruby-2.6.1.tar.gzcd ruby-2.6.1./configuresudo makesudo make installgem install">
+<meta name="twitter:title" content="堆排序(Heap Sort)">
+<meta name="twitter:description" content="堆是一个数组，可以将其视为一个近似的完全二叉树。换言之，即将一维的数组以二维的二叉树结构形式来对待处理。 思想在递增排序中，利用最大堆根节点为最大值的性质，每次取最大堆的根节点元素放到数组末尾，以此前推形成递增排序结果。  首先构造初始最大堆 交换最大堆的根节点元素与堆尾元素 缩小堆规模 重新调整最大堆  时间复杂度: O(nlogn) 构造初始最大堆时间复杂度为O(n)，每次重整最大堆的时间复杂">
 
-<link rel="canonical" href="https://blog.idehai.com/2019/07/14/Redis Cluster配置/">
+<link rel="canonical" href="https://blog.idehai.com/2020/05/06/HeapSort/">
 
 
 <script id="page-configurations">
@@ -46,7 +46,7 @@
   };
 </script>
 
-  <title>Redis Cluster配置 | Dylan.K's Blog</title>
+  <title>堆排序(Heap Sort) | Dylan.K's Blog</title>
   
 
 
@@ -168,7 +168,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://blog.idehai.com/2019/07/14/Redis Cluster配置/">
+    <link itemprop="mainEntityOfPage" href="https://blog.idehai.com/2020/05/06/HeapSort/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -181,7 +181,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Redis Cluster配置
+          堆排序(Heap Sort)
         </h1>
 
         <div class="post-meta">
@@ -191,14 +191,14 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2019-07-14 00:12:00" itemprop="dateCreated datePublished" datetime="2019-07-14T00:12:00+08:00">2019-07-14</time>
+              <time title="创建时间：2020-05-06 23:17:41" itemprop="dateCreated datePublished" datetime="2020-05-06T23:17:41+08:00">2020-05-06</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-04-28 03:05:16" itemprop="dateModified" datetime="2020-04-28T03:05:16+08:00">2020-04-28</time>
+                <time title="修改时间：2020-05-07 00:55:14" itemprop="dateModified" datetime="2020-05-07T00:55:14+08:00">2020-05-07</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -206,7 +206,7 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/环境安装与配置/" itemprop="url" rel="index"><span itemprop="name">环境安装与配置</span></a>
+                  <a href="/categories/算法/" itemprop="url" rel="index"><span itemprop="name">算法</span></a>
                 </span>
             </span>
 
@@ -228,37 +228,17 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h2 id="1-安装Ruby"><a href="#1-安装Ruby" class="headerlink" title="1 安装Ruby"></a>1 安装Ruby</h2><p>Redis cluster的运行需要使用Ruby</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">wget https://cache.ruby-lang.org/pub/ruby/2.6/ruby-2.6.1.tar.gz</span><br><span class="line"></span><br><span class="line">tar -zxvf ruby-2.6.1.tar.gz</span><br><span class="line"></span><br><span class="line">cd ruby-2.6.1</span><br><span class="line">./configure</span><br><span class="line"></span><br><span class="line">sudo make</span><br><span class="line"></span><br><span class="line">sudo make install</span><br><span class="line"></span><br><span class="line">gem install redis</span><br></pre></td></tr></table></figure>
-<a id="more"></a>
-<h2 id="2-编写配置文件"><a href="#2-编写配置文件" class="headerlink" title="2 编写配置文件"></a>2 编写配置文件</h2><p><strong>以机器ip地址 172.17.0.133 为例。</strong></p>
-<p>在<code>/etc/redis/</code>中创建7000.conf，修改如下 </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">bind 172.17.0.133 </span><br><span class="line">port 7000 </span><br><span class="line">pidfile /var/run/redis_7000.pid </span><br><span class="line">logfile /var/log/redis_7000.log </span><br><span class="line">dir /var/lib/redis/7000 </span><br><span class="line">maxmemory 300000000 </span><br><span class="line">maxmemory-policy volatile-lru </span><br><span class="line">appendonly yes </span><br><span class="line">cluster-enabled yes </span><br><span class="line">cluster-config-file nodes-7000.conf </span><br><span class="line">cluster-node-timeout 10000</span><br></pre></td></tr></table></figure>
-<p>复制并创建另外5个配置文件，<strong>注意修改配置的细节信息</strong></p>
+        <p><strong>堆</strong>是一个数组，可以将其视为一个近似的完全二叉树。换言之，即将一维的数组以二维的二叉树结构形式来对待处理。</p>
+<h2 id="思想"><a href="#思想" class="headerlink" title="思想"></a>思想</h2><p>在递增排序中，利用<strong>最大堆根节点为最大值</strong>的性质，每次取最大堆的根节点元素放到数组末尾，以此前推形成递增排序结果。</p>
 <ul>
-<li>7001.conf</li>
-<li>7002.conf</li>
-<li>7003.conf</li>
-<li>7004.conf</li>
-<li>7005.conf</li>
+<li>首先构造初始最大堆</li>
+<li>交换最大堆的根节点元素与堆尾元素</li>
+<li>缩小堆规模</li>
+<li>重新调整最大堆</li>
 </ul>
-<h2 id="3-启动6个redis实例"><a href="#3-启动6个redis实例" class="headerlink" title="3 启动6个redis实例"></a>3 启动6个redis实例</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">redis-server /etc/redis/7000.conf</span><br><span class="line">redis-server /etc/redis/7001.conf</span><br><span class="line">redis-server /etc/redis/7002.conf</span><br><span class="line">redis-server /etc/redis/7003.conf</span><br><span class="line">redis-server /etc/redis/7004.conf</span><br><span class="line">redis-server /etc/redis/7005.conf</span><br></pre></td></tr></table></figure>
-<h2 id="4-启动cluster集群"><a href="#4-启动cluster集群" class="headerlink" title="4 启动cluster集群"></a>4 启动cluster集群</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo cp /root/redis-4.0.13/src/redis-trib.rb /usr/local/bin/</span><br><span class="line"></span><br><span class="line">redis-trib.rb create --replicas 1 172.17.0.133:7000 172.17.0.133:7001 172.17.0.133:7002 172.17.0.133:7003 172.17.0.133:7004 172.17.0.133:7005</span><br></pre></td></tr></table></figure>
-<h2 id="5-问题处理"><a href="#5-问题处理" class="headerlink" title="5 问题处理"></a>5 问题处理</h2><p>如果遇到 <code>waiting for the cluster to join</code>的问题，可从如下两点排错：</p>
-<ul>
-<li>配置文件中需要移除 bind 127.0.0.1 </li>
-<li>1xxxx端口防火墙是否放开 （cluster集群内需要使用1xxxx端口进行通讯）</li>
-</ul>
-<h2 id="6-Cluster辅助命令"><a href="#6-Cluster辅助命令" class="headerlink" title="6 Cluster辅助命令"></a>6 Cluster辅助命令</h2><ul>
-<li>redis-trib.rb help</li>
-<li>CLUSTER INFO 打印集群的信息  </li>
-<li><p>CLUSTER NODES 列出集群当前已知的所有节点（node），以及这些节点的相关信息。</p>
-</li>
-<li><p>CLUSTER FORGET &lt;node_id&gt; 从集群中移除 node_id 指定的节点</p>
-</li>
-<li><p>CLUSTER FLUSHSLOTS 移除指派给当前节点的所有槽，让当前节点变成一个没有指派任何槽的节点。</p>
-</li>
-</ul>
+<p>时间复杂度: O(nlogn)</p>
+<p>构造初始最大堆时间复杂度为O(n)，每次重整最大堆的时间复杂度为O(logn)，n-1次重整最大堆时间复杂度为O(nlogn)，总时间复杂度为O(n)+O(nlogn)即为O(nlogn)。</p>
+<h2 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#############</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># Heap Sort</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment">#############</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">reconstruct_max_heap</span><span class="params">(array, end, root)</span>:</span></span><br><span class="line">    <span class="string">"""</span></span><br><span class="line"><span class="string">    :param array: list</span></span><br><span class="line"><span class="string">    :param end: int, the heap last node pos</span></span><br><span class="line"><span class="string">    :param root: int, heap root </span></span><br><span class="line"><span class="string">    :return: None</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line">    left_sub_root = root * <span class="number">2</span></span><br><span class="line">    right_sub_root = root * <span class="number">2</span> + <span class="number">1</span></span><br><span class="line">    largest = root</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> left_sub_root &lt;= end <span class="keyword">and</span> array[left_sub_root] &gt; array[root]:</span><br><span class="line">        largest = left_sub_root</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> right_sub_root &lt;= end <span class="keyword">and</span> array[right_sub_root] &gt; array[largest]:</span><br><span class="line">        largest = right_sub_root</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> largest != root:</span><br><span class="line">        array[root], array[largest] = array[largest], array[root]</span><br><span class="line">        reconstruct_max_heap(array, end, largest)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">build_max_heap</span><span class="params">(array)</span>:</span></span><br><span class="line">    <span class="string">"""</span></span><br><span class="line"><span class="string">    :param array: list</span></span><br><span class="line"><span class="string">    :return: list</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line">    <span class="comment"># Reconstruct sub max heap from the last non-leaf-node and back towards the root.</span></span><br><span class="line">    n = len(array)</span><br><span class="line">    cur = n // <span class="number">2</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">while</span> cur &gt;= <span class="number">0</span>:</span><br><span class="line">        reconstruct_max_heap(array, n<span class="number">-1</span>, cur)</span><br><span class="line">        cur -= <span class="number">1</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> array</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">heap_sort</span><span class="params">(array)</span>:</span></span><br><span class="line">    <span class="string">"""</span></span><br><span class="line"><span class="string">    Ascending order sort.</span></span><br><span class="line"><span class="string">    :param array: list</span></span><br><span class="line"><span class="string">    :return: list</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line">    <span class="comment"># Build an initial max-heap.</span></span><br><span class="line">    build_max_heap(array)</span><br><span class="line"></span><br><span class="line">    end = len(array) - <span class="number">1</span></span><br><span class="line">    <span class="keyword">while</span> end &gt;= <span class="number">1</span>:</span><br><span class="line">        <span class="comment"># Exchange root node and tail node.</span></span><br><span class="line">        array[<span class="number">0</span>], array[end] = array[end], array[<span class="number">0</span>]</span><br><span class="line"></span><br><span class="line">        <span class="comment"># Decrease the max-heap size.</span></span><br><span class="line">        end -= <span class="number">1</span></span><br><span class="line"></span><br><span class="line">        <span class="comment"># Reconstruct max-heap.</span></span><br><span class="line">        reconstruct_max_heap(array, end, <span class="number">0</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> array</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</span><br><span class="line">    li = [<span class="number">5</span>, <span class="number">13</span>, <span class="number">2</span>, <span class="number">25</span>, <span class="number">7</span>, <span class="number">17</span>, <span class="number">20</span>, <span class="number">8</span>, <span class="number">4</span>]</span><br><span class="line">    heap_sort(li)</span><br><span class="line">    print(li)</span><br></pre></td></tr></table></figure>
 
     </div>
 
@@ -274,7 +254,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://blog.idehai.com/2019/07/14/Redis Cluster配置/" title="Redis Cluster配置">https://blog.idehai.com/2019/07/14/Redis Cluster配置/</a>
+    <a href="https://blog.idehai.com/2020/05/06/HeapSort/" title="堆排序(Heap Sort)">https://blog.idehai.com/2020/05/06/HeapSort/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -285,7 +265,8 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/Redis/" rel="tag"># Redis</a>
+              <a href="/tags/堆/" rel="tag"># 堆</a>
+              <a href="/tags/排序/" rel="tag"># 排序</a>
           </div>
 
         
@@ -294,13 +275,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2019/07/14/CentOS7安装RabbitMQ/" rel="prev" title="CentOS7安装RabbitMQ">
-      <i class="fa fa-chevron-left"></i> CentOS7安装RabbitMQ
+    <a href="/2020/04/29/最大子数组问题/" rel="prev" title="最大子数组问题">
+      <i class="fa fa-chevron-left"></i> 最大子数组问题
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2019/07/14/Redis主从与哨兵高可用配置/" rel="next" title="Redis主从与哨兵高可用配置">
-      Redis主从与哨兵高可用配置 <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -360,7 +338,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-安装Ruby"><span class="nav-number">1.</span> <span class="nav-text">1 安装Ruby</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-编写配置文件"><span class="nav-number">2.</span> <span class="nav-text">2 编写配置文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-启动6个redis实例"><span class="nav-number">3.</span> <span class="nav-text">3 启动6个redis实例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-启动cluster集群"><span class="nav-number">4.</span> <span class="nav-text">4 启动cluster集群</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-问题处理"><span class="nav-number">5.</span> <span class="nav-text">5 问题处理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-Cluster辅助命令"><span class="nav-number">6.</span> <span class="nav-text">6 Cluster辅助命令</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#思想"><span class="nav-number">1.</span> <span class="nav-text">思想</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码实现"><span class="nav-number">2.</span> <span class="nav-text">代码实现</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -517,7 +495,7 @@ NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
       repo        : 'dylankung.github.io',
       owner       : 'dylankung',
       admin       : ['dylankung'],
-      id          : '01ffa223ca915ab2d595a8dd9631248c',
+      id          : '642069a3c2063c89cf450a325ccfa5d2',
         language: 'zh-CN',
       distractionFreeMode: true
     });

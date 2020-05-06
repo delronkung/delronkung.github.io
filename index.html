@@ -165,6 +165,90 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://blog.idehai.com/2020/05/06/HeapSort/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Dylan Kung">
+      <meta itemprop="description" content="大道至简至易">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Dylan.K's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/05/06/HeapSort/" class="post-title-link" itemprop="url">堆排序(Heap Sort)</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-05-06 23:17:41" itemprop="dateCreated datePublished" datetime="2020-05-06T23:17:41+08:00">2020-05-06</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-05-07 00:55:14" itemprop="dateModified" datetime="2020-05-07T00:55:14+08:00">2020-05-07</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/算法/" itemprop="url" rel="index"><span itemprop="name">算法</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><strong>堆</strong>是一个数组，可以将其视为一个近似的完全二叉树。换言之，即将一维的数组以二维的二叉树结构形式来对待处理。</p>
+<h2 id="思想"><a href="#思想" class="headerlink" title="思想"></a>思想</h2><p>在递增排序中，利用<strong>最大堆根节点为最大值</strong>的性质，每次取最大堆的根节点元素放到数组末尾，以此前推形成递增排序结果。</p>
+<ul>
+<li>首先构造初始最大堆</li>
+<li>交换最大堆的根节点元素与堆尾元素</li>
+<li>缩小堆规模</li>
+<li>重新调整最大堆</li>
+</ul>
+<p>时间复杂度: O(nlogn)</p>
+<p>构造初始最大堆时间复杂度为O(n)，每次重整最大堆的时间复杂度为O(logn)，n-1次重整最大堆时间复杂度为O(nlogn)，总时间复杂度为O(n)+O(nlogn)即为O(nlogn)。</p>
+<h2 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#############</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># Heap Sort</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment">#############</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">reconstruct_max_heap</span><span class="params">(array, end, root)</span>:</span></span><br><span class="line">    <span class="string">"""</span></span><br><span class="line"><span class="string">    :param array: list</span></span><br><span class="line"><span class="string">    :param end: int, the heap last node pos</span></span><br><span class="line"><span class="string">    :param root: int, heap root </span></span><br><span class="line"><span class="string">    :return: None</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line">    left_sub_root = root * <span class="number">2</span></span><br><span class="line">    right_sub_root = root * <span class="number">2</span> + <span class="number">1</span></span><br><span class="line">    largest = root</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> left_sub_root &lt;= end <span class="keyword">and</span> array[left_sub_root] &gt; array[root]:</span><br><span class="line">        largest = left_sub_root</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> right_sub_root &lt;= end <span class="keyword">and</span> array[right_sub_root] &gt; array[largest]:</span><br><span class="line">        largest = right_sub_root</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> largest != root:</span><br><span class="line">        array[root], array[largest] = array[largest], array[root]</span><br><span class="line">        reconstruct_max_heap(array, end, largest)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">build_max_heap</span><span class="params">(array)</span>:</span></span><br><span class="line">    <span class="string">"""</span></span><br><span class="line"><span class="string">    :param array: list</span></span><br><span class="line"><span class="string">    :return: list</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line">    <span class="comment"># Reconstruct sub max heap from the last non-leaf-node and back towards the root.</span></span><br><span class="line">    n = len(array)</span><br><span class="line">    cur = n // <span class="number">2</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">while</span> cur &gt;= <span class="number">0</span>:</span><br><span class="line">        reconstruct_max_heap(array, n<span class="number">-1</span>, cur)</span><br><span class="line">        cur -= <span class="number">1</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> array</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">heap_sort</span><span class="params">(array)</span>:</span></span><br><span class="line">    <span class="string">"""</span></span><br><span class="line"><span class="string">    Ascending order sort.</span></span><br><span class="line"><span class="string">    :param array: list</span></span><br><span class="line"><span class="string">    :return: list</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line">    <span class="comment"># Build an initial max-heap.</span></span><br><span class="line">    build_max_heap(array)</span><br><span class="line"></span><br><span class="line">    end = len(array) - <span class="number">1</span></span><br><span class="line">    <span class="keyword">while</span> end &gt;= <span class="number">1</span>:</span><br><span class="line">        <span class="comment"># Exchange root node and tail node.</span></span><br><span class="line">        array[<span class="number">0</span>], array[end] = array[end], array[<span class="number">0</span>]</span><br><span class="line"></span><br><span class="line">        <span class="comment"># Decrease the max-heap size.</span></span><br><span class="line">        end -= <span class="number">1</span></span><br><span class="line"></span><br><span class="line">        <span class="comment"># Reconstruct max-heap.</span></span><br><span class="line">        reconstruct_max_heap(array, end, <span class="number">0</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> array</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</span><br><span class="line">    li = [<span class="number">5</span>, <span class="number">13</span>, <span class="number">2</span>, <span class="number">25</span>, <span class="number">7</span>, <span class="number">17</span>, <span class="number">20</span>, <span class="number">8</span>, <span class="number">4</span>]</span><br><span class="line">    heap_sort(li)</span><br><span class="line">    print(li)</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://blog.idehai.com/2020/04/29/最大子数组问题/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -196,7 +280,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-04-30 01:34:13" itemprop="dateModified" datetime="2020-04-30T01:34:13+08:00">2020-04-30</time>
+                <time title="修改时间：2020-05-06 23:24:07" itemprop="dateModified" datetime="2020-05-06T23:24:07+08:00">2020-05-06</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -909,90 +993,6 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://blog.idehai.com/2019/07/13/CentOS7安装MySQL/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="Dylan Kung">
-      <meta itemprop="description" content="大道至简至易">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Dylan.K's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2019/07/13/CentOS7安装MySQL/" class="post-title-link" itemprop="url">CentOS7安装MySQL（MariaDB)</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2019-07-13 23:00:31" itemprop="dateCreated datePublished" datetime="2019-07-13T23:00:31+08:00">2019-07-13</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-04-28 03:12:54" itemprop="dateModified" datetime="2020-04-28T03:12:54+08:00">2020-04-28</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/环境安装与配置/" itemprop="url" rel="index"><span itemprop="name">环境安装与配置</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="1-添加MariaDB软件源"><a href="#1-添加MariaDB软件源" class="headerlink" title="1 添加MariaDB软件源"></a>1 添加MariaDB软件源</h2><p>在<code>/etc/yum.repos.d/</code>目录中添加MariaDB.repo文件</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd /etc/yum.repos.d</span><br><span class="line">sudo vi MariaDB.repo</span><br></pre></td></tr></table></figure>
-<p>在文件中编写</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"># MariaDB 10.3 CentOS repository list - created 2018-11-24 14:39 UTC</span><br><span class="line"># http://downloads.mariadb.org/mariadb/repositories/</span><br><span class="line">[mariadb]</span><br><span class="line">name = MariaDB</span><br><span class="line">#baseurl = http://yum.mariadb.org/10.3/centos7-amd64</span><br><span class="line">baseurl = http://mirrors.ustc.edu.cn/mariadb/yum/10.3/centos7-amd64</span><br><span class="line">#gpgkey=https://yum.mariadb.org/RPM-GPG-KEY-MariaDB</span><br><span class="line">gpgkey=http://mirrors.ustc.edu.cn/mariadb/yum/RPM-GPG-KEY-MariaDB</span><br><span class="line">gpgcheck=1</span><br></pre></td></tr></table></figure>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2019/07/13/CentOS7安装MySQL/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1064,7 +1064,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">12</span>
+          <span class="site-state-item-count">13</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1077,7 +1077,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-count">9</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
