@@ -20,20 +20,19 @@
     var CONFIG = {"hostname":"blog.idehai.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"always","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":null,"activeClass":"gitalk"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="1 安装RubyRedis cluster的运行需要使用Ruby 123456789101112wget https://cache.ruby-lang.org/pub/ruby/2.6/ruby-2.6.1.tar.gztar -zxvf ruby-2.6.1.tar.gzcd ruby-2.6.1./configuresudo makesudo make installgem install">
-<meta name="keywords" content="Redis">
+  <meta name="description" content="思想朴素的字符串匹配算法是从前到后连续的一个字符一个字符的比较判断是否一致，其时间复杂度为O(mn)，其中m为匹配模式的字符串长度，而n为待皮牌的字符串长度。 KMP算法欲改进的就是在匹配时连续一个一个匹配会有做无用功的时候，可以跳过一些字符再比较。而可以跳过的字符通过计算匹配模式字符串的哪些前缀和后缀相同可得。 时间复杂度可以降为线性的O(m+n)。 代码实现">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Redis Cluster配置">
-<meta property="og:url" content="https://blog.idehai.com/2019/07/14/Redis Cluster配置/index.html">
+<meta property="og:title" content="字符串匹配之KMP算法">
+<meta property="og:url" content="https://blog.idehai.com/2020/05/11/KMP-Algorithm/index.html">
 <meta property="og:site_name" content="Dylan.K&#39;s Blog">
-<meta property="og:description" content="1 安装RubyRedis cluster的运行需要使用Ruby 123456789101112wget https://cache.ruby-lang.org/pub/ruby/2.6/ruby-2.6.1.tar.gztar -zxvf ruby-2.6.1.tar.gzcd ruby-2.6.1./configuresudo makesudo make installgem install">
+<meta property="og:description" content="思想朴素的字符串匹配算法是从前到后连续的一个字符一个字符的比较判断是否一致，其时间复杂度为O(mn)，其中m为匹配模式的字符串长度，而n为待皮牌的字符串长度。 KMP算法欲改进的就是在匹配时连续一个一个匹配会有做无用功的时候，可以跳过一些字符再比较。而可以跳过的字符通过计算匹配模式字符串的哪些前缀和后缀相同可得。 时间复杂度可以降为线性的O(m+n)。 代码实现">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-04-27T19:05:16.498Z">
+<meta property="og:updated_time" content="2020-05-11T10:33:42.361Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Redis Cluster配置">
-<meta name="twitter:description" content="1 安装RubyRedis cluster的运行需要使用Ruby 123456789101112wget https://cache.ruby-lang.org/pub/ruby/2.6/ruby-2.6.1.tar.gztar -zxvf ruby-2.6.1.tar.gzcd ruby-2.6.1./configuresudo makesudo make installgem install">
+<meta name="twitter:title" content="字符串匹配之KMP算法">
+<meta name="twitter:description" content="思想朴素的字符串匹配算法是从前到后连续的一个字符一个字符的比较判断是否一致，其时间复杂度为O(mn)，其中m为匹配模式的字符串长度，而n为待皮牌的字符串长度。 KMP算法欲改进的就是在匹配时连续一个一个匹配会有做无用功的时候，可以跳过一些字符再比较。而可以跳过的字符通过计算匹配模式字符串的哪些前缀和后缀相同可得。 时间复杂度可以降为线性的O(m+n)。 代码实现">
 
-<link rel="canonical" href="https://blog.idehai.com/2019/07/14/Redis Cluster配置/">
+<link rel="canonical" href="https://blog.idehai.com/2020/05/11/KMP-Algorithm/">
 
 
 <script id="page-configurations">
@@ -46,7 +45,7 @@
   };
 </script>
 
-  <title>Redis Cluster配置 | Dylan.K's Blog</title>
+  <title>字符串匹配之KMP算法 | Dylan.K's Blog</title>
   
 
 
@@ -168,7 +167,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://blog.idehai.com/2019/07/14/Redis Cluster配置/">
+    <link itemprop="mainEntityOfPage" href="https://blog.idehai.com/2020/05/11/KMP-Algorithm/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -181,7 +180,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Redis Cluster配置
+          字符串匹配之KMP算法
         </h1>
 
         <div class="post-meta">
@@ -190,23 +189,17 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
+              
 
-              <time title="创建时间：2019-07-14 00:12:00" itemprop="dateCreated datePublished" datetime="2019-07-14T00:12:00+08:00">2019-07-14</time>
+              <time title="创建时间：2020-05-11 15:11:04 / 修改时间：18:33:42" itemprop="dateCreated datePublished" datetime="2020-05-11T15:11:04+08:00">2020-05-11</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-04-28 03:05:16" itemprop="dateModified" datetime="2020-04-28T03:05:16+08:00">2020-04-28</time>
-              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/环境安装与配置/" itemprop="url" rel="index"><span itemprop="name">环境安装与配置</span></a>
+                  <a href="/categories/算法/" itemprop="url" rel="index"><span itemprop="name">算法</span></a>
                 </span>
             </span>
 
@@ -228,37 +221,11 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h2 id="1-安装Ruby"><a href="#1-安装Ruby" class="headerlink" title="1 安装Ruby"></a>1 安装Ruby</h2><p>Redis cluster的运行需要使用Ruby</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">wget https://cache.ruby-lang.org/pub/ruby/2.6/ruby-2.6.1.tar.gz</span><br><span class="line"></span><br><span class="line">tar -zxvf ruby-2.6.1.tar.gz</span><br><span class="line"></span><br><span class="line">cd ruby-2.6.1</span><br><span class="line">./configure</span><br><span class="line"></span><br><span class="line">sudo make</span><br><span class="line"></span><br><span class="line">sudo make install</span><br><span class="line"></span><br><span class="line">gem install redis</span><br></pre></td></tr></table></figure>
-<a id="more"></a>
-<h2 id="2-编写配置文件"><a href="#2-编写配置文件" class="headerlink" title="2 编写配置文件"></a>2 编写配置文件</h2><p><strong>以机器ip地址 172.17.0.133 为例。</strong></p>
-<p>在<code>/etc/redis/</code>中创建7000.conf，修改如下 </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">bind 172.17.0.133 </span><br><span class="line">port 7000 </span><br><span class="line">pidfile /var/run/redis_7000.pid </span><br><span class="line">logfile /var/log/redis_7000.log </span><br><span class="line">dir /var/lib/redis/7000 </span><br><span class="line">maxmemory 300000000 </span><br><span class="line">maxmemory-policy volatile-lru </span><br><span class="line">appendonly yes </span><br><span class="line">cluster-enabled yes </span><br><span class="line">cluster-config-file nodes-7000.conf </span><br><span class="line">cluster-node-timeout 10000</span><br></pre></td></tr></table></figure>
-<p>复制并创建另外5个配置文件，<strong>注意修改配置的细节信息</strong></p>
-<ul>
-<li>7001.conf</li>
-<li>7002.conf</li>
-<li>7003.conf</li>
-<li>7004.conf</li>
-<li>7005.conf</li>
-</ul>
-<h2 id="3-启动6个redis实例"><a href="#3-启动6个redis实例" class="headerlink" title="3 启动6个redis实例"></a>3 启动6个redis实例</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">redis-server /etc/redis/7000.conf</span><br><span class="line">redis-server /etc/redis/7001.conf</span><br><span class="line">redis-server /etc/redis/7002.conf</span><br><span class="line">redis-server /etc/redis/7003.conf</span><br><span class="line">redis-server /etc/redis/7004.conf</span><br><span class="line">redis-server /etc/redis/7005.conf</span><br></pre></td></tr></table></figure>
-<h2 id="4-启动cluster集群"><a href="#4-启动cluster集群" class="headerlink" title="4 启动cluster集群"></a>4 启动cluster集群</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo cp /root/redis-4.0.13/src/redis-trib.rb /usr/local/bin/</span><br><span class="line"></span><br><span class="line">redis-trib.rb create --replicas 1 172.17.0.133:7000 172.17.0.133:7001 172.17.0.133:7002 172.17.0.133:7003 172.17.0.133:7004 172.17.0.133:7005</span><br></pre></td></tr></table></figure>
-<h2 id="5-问题处理"><a href="#5-问题处理" class="headerlink" title="5 问题处理"></a>5 问题处理</h2><p>如果遇到 <code>waiting for the cluster to join</code>的问题，可从如下两点排错：</p>
-<ul>
-<li>配置文件中需要移除 bind 127.0.0.1 </li>
-<li>1xxxx端口防火墙是否放开 （cluster集群内需要使用1xxxx端口进行通讯）</li>
-</ul>
-<h2 id="6-Cluster辅助命令"><a href="#6-Cluster辅助命令" class="headerlink" title="6 Cluster辅助命令"></a>6 Cluster辅助命令</h2><ul>
-<li>redis-trib.rb help</li>
-<li>CLUSTER INFO 打印集群的信息  </li>
-<li><p>CLUSTER NODES 列出集群当前已知的所有节点（node），以及这些节点的相关信息。</p>
-</li>
-<li><p>CLUSTER FORGET &lt;node_id&gt; 从集群中移除 node_id 指定的节点</p>
-</li>
-<li><p>CLUSTER FLUSHSLOTS 移除指派给当前节点的所有槽，让当前节点变成一个没有指派任何槽的节点。</p>
-</li>
-</ul>
+        <h2 id="思想"><a href="#思想" class="headerlink" title="思想"></a>思想</h2><p>朴素的字符串匹配算法是从前到后连续的一个字符一个字符的比较判断是否一致，其时间复杂度为O(mn)，其中m为匹配模式的字符串长度，而n为待皮牌的字符串长度。</p>
+<p>KMP算法欲改进的就是在匹配时连续一个一个匹配会有做无用功的时候，可以跳过一些字符再比较。而可以跳过的字符通过计算匹配模式字符串的哪些前缀和后缀相同可得。</p>
+<p>时间复杂度可以降为线性的O(m+n)。</p>
+<h2 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h2><a id="more"></a>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#####################</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># KMP Algorithm</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment">#####################</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">kmp_string_search</span><span class="params">(s, p)</span>:</span></span><br><span class="line">    <span class="string">"""</span></span><br><span class="line"><span class="string">    :param s:string</span></span><br><span class="line"><span class="string">    :param p:string, pattern</span></span><br><span class="line"><span class="string">    :return:list</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line">    <span class="comment"># build pattern string array</span></span><br><span class="line">    m = len(p) </span><br><span class="line">    li = [<span class="number">0</span>] * (m+<span class="number">1</span>)</span><br><span class="line">    i = <span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> range(<span class="number">1</span>, m):</span><br><span class="line">        <span class="keyword">while</span> i &gt; <span class="number">0</span> <span class="keyword">and</span> p[j] != p[i]:</span><br><span class="line">            i = li[i]</span><br><span class="line"></span><br><span class="line">        <span class="comment"># 当有j+1个字符的时候，有i+1个前后缀重叠</span></span><br><span class="line">        <span class="keyword">if</span> p[j] == p[i]:</span><br><span class="line">            i += <span class="number">1</span></span><br><span class="line">            li[j+<span class="number">1</span>] = i + <span class="number">1</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># use above array to search </span></span><br><span class="line">    n = len(s)</span><br><span class="line">    i = <span class="number">0</span></span><br><span class="line">    finds = []</span><br><span class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> range(<span class="number">0</span>, n):</span><br><span class="line">        <span class="keyword">while</span> i &gt; <span class="number">0</span> <span class="keyword">and</span> s[j] != p[i]:</span><br><span class="line">            i = li[i]</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span> s[j] == p[i]:</span><br><span class="line">            <span class="keyword">if</span> i == m<span class="number">-1</span>:</span><br><span class="line">                finds.append(j-m+<span class="number">1</span>)</span><br><span class="line">                i = li[i+<span class="number">1</span>]</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                i += <span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span> finds</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</span><br><span class="line">    s = <span class="string">'bacbababaabcbababacababacababacababacb'</span></span><br><span class="line">    p = <span class="string">'ababacab'</span></span><br><span class="line">    print(s)</span><br><span class="line">    print(p)</span><br><span class="line">    finds = kmp_string_search(s, p)</span><br><span class="line">    <span class="keyword">for</span> index <span class="keyword">in</span> finds:</span><br><span class="line">        print(<span class="string">'-'</span>*len(s))</span><br><span class="line">        print(s)</span><br><span class="line">        print(<span class="string">'%s%s'</span> % (<span class="string">' '</span>*index, p))</span><br></pre></td></tr></table></figure>
 
     </div>
 
@@ -274,7 +241,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://blog.idehai.com/2019/07/14/Redis Cluster配置/" title="Redis Cluster配置">https://blog.idehai.com/2019/07/14/Redis Cluster配置/</a>
+    <a href="https://blog.idehai.com/2020/05/11/KMP-Algorithm/" title="字符串匹配之KMP算法">https://blog.idehai.com/2020/05/11/KMP-Algorithm/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -284,9 +251,6 @@
 
 
       <footer class="post-footer">
-          <div class="post-tags">
-              <a href="/tags/Redis/" rel="tag"># Redis</a>
-          </div>
 
         
 
@@ -294,13 +258,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2019/07/14/CentOS7安装RabbitMQ/" rel="prev" title="CentOS7安装RabbitMQ">
-      <i class="fa fa-chevron-left"></i> CentOS7安装RabbitMQ
+    <a href="/2020/05/07/LinearTimeSelect/" rel="prev" title="期望为线性时间的选择算法（中位数算法）">
+      <i class="fa fa-chevron-left"></i> 期望为线性时间的选择算法（中位数算法）
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2019/07/14/Redis主从与哨兵高可用配置/" rel="next" title="Redis主从与哨兵高可用配置">
-      Redis主从与哨兵高可用配置 <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -360,7 +321,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-安装Ruby"><span class="nav-number">1.</span> <span class="nav-text">1 安装Ruby</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-编写配置文件"><span class="nav-number">2.</span> <span class="nav-text">2 编写配置文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-启动6个redis实例"><span class="nav-number">3.</span> <span class="nav-text">3 启动6个redis实例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-启动cluster集群"><span class="nav-number">4.</span> <span class="nav-text">4 启动cluster集群</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-问题处理"><span class="nav-number">5.</span> <span class="nav-text">5 问题处理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-Cluster辅助命令"><span class="nav-number">6.</span> <span class="nav-text">6 Cluster辅助命令</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#思想"><span class="nav-number">1.</span> <span class="nav-text">思想</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码实现"><span class="nav-number">2.</span> <span class="nav-text">代码实现</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -517,7 +478,7 @@ NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
       repo        : 'dylankung.github.io',
       owner       : 'dylankung',
       admin       : ['dylankung'],
-      id          : '01ffa223ca915ab2d595a8dd9631248c',
+      id          : 'f2ae4051495e22d8b0f988460aec5cf7',
         language: 'zh-CN',
       distractionFreeMode: true
     });
